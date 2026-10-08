@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #6c5ce7;
+  --bg-color: #f8f9fd;
+  --card-bg: #ffffff;
+  --text-color: #2d3436;
+}
+
+.dark {
+  --bg-color: #1e1e2e;
+  --card-bg: #2d2d44;
+  --text-color: #ecf0f1;
+  --primary: #8c7ae6;
+}
+
+body {
+  font-family: 'Hind Siliguri', sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Print Optimization for PDF generation */
+@media print {
+  body {
+    padding-top: 0 !important;
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-break-inside-avoid {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+}
